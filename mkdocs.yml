@@ -1,0 +1,68 @@
+site_name: Documentation MSPR - Epsicurieux.
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Accueil: index.md
+  - Documentation ETL:
+      - Introduction:
+          - Contexte: etl/introduction/contexte.md
+          - Objectifs: etl/introduction/objectifs.md
+          - Périmètre: etl/introduction/perimetre.md
+      - Architecture:
+          - Vue d'ensemble: etl/architecture/vue-ensemble.md
+          - Choix Techniques: etl/architecture/choix-techniques.md
+      - Processus ETL:
+          - Extraction: etl/processus/extraction.md
+          - Transformation: etl/processus/transformation.md
+          - Chargement: etl/processus/chargement.md
+      - Points Forts: etl/points-forts.md
+      - Maintenance: etl/maintenance.md
+  - Documentation API:
+      - Introduction:
+          - Présentation: api/introduction/presentation.md
+          - Architecture: api/introduction/architecture.md
+      - Endpoints:
+          - Vue d'ensemble: api/endpoints/overview.md
+          - Authentification: api/endpoints/auth.md
+          - Routes: api/endpoints/routes.md
+      - Modèles:
+          - Structure: api/models/structure.md
+          - Relations: api/models/relations.md
+      - Déploiement:
+          - Configuration: api/deployment/config.md
+          - Installation: api/deployment/install.md
